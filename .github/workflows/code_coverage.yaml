@@ -24,7 +24,7 @@ jobs:
                 cargo llvm-cov --no-report --doc
                 cargo llvm-cov report --doctests --lcov --output-path lcov.info
             - name: Upload to codecov.io
-              uses: codecov/codecov-action@v3
+              uses: codecov/codecov-action@v4
               with:
                 file: lcov.info
               env:
