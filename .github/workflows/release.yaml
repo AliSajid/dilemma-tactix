@@ -96,7 +96,7 @@ jobs:
                 --binary ${{ matrix.bin }}-${{ matrix.build.target }} | tee ${{ matrix.bin }}-${{ matrix.build.target }}-SHA256SUM.txt
               working-directory: ./dist
             - name: Upload release artifacts
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                 name: ${{ matrix.build.target }}
                 path: |
