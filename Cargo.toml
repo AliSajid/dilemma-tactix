@@ -19,11 +19,11 @@ path = "src/tactix/main.rs"
 
 [[bin]]
 name = "tactix-bench"
-path = "src/tactix-bench/main.rs"
+path = "src/tactix_bench/main.rs"
 
 [[bin]]
 name = "tactix-tui"
-path = "src/tactix-tui/main.rs"
+path = "src/tactix_tui/main.rs"
 
 [dependencies]
 anyhow = { version = "1.0.79", features = ["backtrace"] }
@@ -32,7 +32,7 @@ crossterm = { version = "0.27.0", features = ["serde"] }
 prettytable-rs = "0.10.0"
 rand = { version = "0.8.5" }
 rand_chacha = "0.3.1"
-ratatui = { version = "0.26.0" }
+ratatui = { version = "0.26" }
 tokio = { version = "1.28.1", features = ["full"] }
 
 [dev-dependencies]

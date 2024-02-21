@@ -7908,7 +7908,7 @@
                         "path": null,
                         "registry": null,
                         "rename": null,
-                        "req": "^0.26.0",
+                        "req": "^0.26",
                         "source": "registry+https://github.com/rust-lang/crates.io-index",
                         "target": null,
                         "uses_default_features": true
@@ -8002,7 +8002,7 @@
                         ],
                         "name": "tactix-bench",
                         "required-features": [],
-                        "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix-bench/main.rs",
+                        "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix_bench/main.rs",
                         "test": true
                     },
                     {
@@ -8017,7 +8017,7 @@
                         ],
                         "name": "tactix-tui",
                         "required-features": [],
-                        "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix-tui/main.rs",
+                        "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix_tui/main.rs",
                         "test": true
                     }
                 ],
@@ -34347,7 +34347,7 @@
                                 "path": null,
                                 "registry": null,
                                 "rename": null,
-                                "req": "^0.26.0",
+                                "req": "^0.26",
                                 "source": "registry+https://github.com/rust-lang/crates.io-index",
                                 "target": null,
                                 "uses_default_features": true
@@ -34441,7 +34441,7 @@
                                 ],
                                 "name": "tactix-bench",
                                 "required-features": [],
-                                "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix-bench/main.rs",
+                                "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix_bench/main.rs",
                                 "test": true
                             },
                             {
@@ -34456,7 +34456,7 @@
                                 ],
                                 "name": "tactix-tui",
                                 "required-features": [],
-                                "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix-tui/main.rs",
+                                "src_path": "/Users/aimami/experiments/rust-projects/dilemma_tactix/src/tactix_tui/main.rs",
                                 "test": true
                             }
                         ],

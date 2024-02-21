@@ -129,17 +129,17 @@ impl GameGrid {
     ///
     /// * [`GameGrid::show_grid()`](struct.GameGrid.html#method.show_grid)
     /// * [`Table`](https://docs.rs/prettytable/0.8.0/prettytable/struct.Table.html)
-
-    fn make_grid(&self) -> Table {
+    #[must_use]
+    pub fn make_grid(&self) -> Table {
         let mut table = Table::new();
 
         table.add_row(Row::new(vec![
             Cell::new(""),
-            Cell::new_align("Player 2", Alignment::CENTER).with_hspan(2),
+            Cell::new_align("Beth", Alignment::CENTER).with_hspan(2),
         ]));
 
         table.add_row(Row::new(vec![
-            Cell::new("Player 1"),
+            Cell::new("Aleph"),
             Cell::new(self.game_options.choice_atlantis()),
             Cell::new(self.game_options.choice_olympus()),
         ]));

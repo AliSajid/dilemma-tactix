@@ -3,6 +3,9 @@
         "chacha",
         "minigame",
         "rstest",
-        "Seedable"
-    ]
+        "Seedable",
+        "sublayout"
+    ],
+    "cargo.automaticCheck": false,
+    "rust-analyzer.showUnlinkedFileNotification": false
 }

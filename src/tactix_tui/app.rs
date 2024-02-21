@@ -42,6 +42,21 @@
 // * SOFTWARE.
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-pub fn main() {
-    println!("Hello, world!");
+use dilemma_tactix_lib::{
+    Choice,
+    GameGrid,
+};
+
+pub struct App {
+    pub game_grid: GameGrid,
+    pub selected:  Option<Choice>,
+}
+
+impl App {
+    pub const fn new(game_grid: GameGrid) -> Self {
+        Self {
+            game_grid,
+            selected: None,
+        }
+    }
 }
