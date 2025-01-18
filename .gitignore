@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2023 - 2024 Ali Sajid Imami
+#
+# SPDX-License-Identifier: CC0-1.0
+
 # Created by https://www.toptal.com/developers/gitignore/api/rust
 # Edit at https://www.toptal.com/developers/gitignore?templates=rust
 
@@ -20,3 +24,9 @@ Cargo.lock
 # End of https://www.toptal.com/developers/gitignore/api/rust
 
 !scripts/
+
+guide/book
+
+meta/vale-styles/*
+!meta/vale-styles/config
+!meta/vale-styles/config/**/*
