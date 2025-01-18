@@ -23,17 +23,10 @@ repos:
           types: [rust]
           files: \.rs$
           pass_filenames: false
-        - id: cargo-about-json
-          name: Generate list of licenses in JSON
-          entry: scripts/generate_about_json.sh
-          language: script
-          types_or: [file, rust]
-          files: "Cargo.toml$"
-          pass_filenames: false
-        - id: cargo-about-md
-          name: Generate list of licenses in Markdown
-          entry: scripts/generate_about_md.sh meta/licenses.hbs
-          language: script
+        - id: cargo-about
+          name: Generate list of licenses in JSON and Markdown
+          entry: mise run util:generate-about
+          language: system
           types_or: [file, rust]
           files: "Cargo.toml$"
           pass_filenames: false
@@ -52,7 +45,6 @@ repos:
       rev: v5.0.0
       hooks:
         - id: check-json
-          exclude: ".vscode/.*json"
         - id: check-merge-conflict
         - id: no-commit-to-branch
           args:
@@ -70,7 +62,6 @@ repos:
           args:
             - --fix=no
         - id: pretty-format-json
-          exclude: ".vscode/launch.json"
           args:
             - --indent=4
             - --autofix
@@ -105,15 +96,6 @@ repos:
         - id: remove-crlf
         - id: forbid-tabs
         - id: remove-tabs
-        - id: insert-license
-          args:
-            - --license-filepath
-            - meta/LICENSE-HEADER
-            - --comment-style
-            - //
-            - --use-current-year
-            - --allow-past-years
-          files: \.rs$
     - repo: https://github.com/google/yamlfmt
       rev: v0.15.0
       hooks:
@@ -141,6 +123,15 @@ repos:
         - id: fix-ligatures
         - id: forbid-bidi-controls
     - repo: https://github.com/zricethezav/gitleaks
-      rev: v8.23.0
+      rev: v8.23.1
       hooks:
         - id: gitleaks
+    - repo: https://github.com/fsfe/reuse-tool
+      rev: v5.0.2
+      hooks:
+        - id: reuse-lint-file
+    - repo: https://github.com/renovatebot/pre-commit-hooks
+      rev: 39.113.0
+      hooks:
+        - id: renovate-config-validator
+          args: [--strict]

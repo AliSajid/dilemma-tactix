@@ -11,8 +11,8 @@ This page lists the licenses of the projects used in cargo-about.
 
 ## Overview of licenses
 
-- [Apache License 2.0](#Apache-2.0) (112)
-- [MIT License](#MIT) (27)
+- [Apache License 2.0](#Apache-2.0) (111)
+- [MIT License](#MIT) (30)
 - [BSD 3-Clause "New" or "Revised" License](#BSD-3-Clause) (1)
 - [Unicode License v3](#Unicode-3.0) (1)
 - [zlib License](#Zlib) (1)
@@ -218,6 +218,7 @@ Apache License 2.0
 #### Used by
 
 - [encode_unicode]( https://github.com/tormol/encode_unicode ) 1.0.0
+- [static_assertions]( https://github.com/nvzqz/static-assertions-rs ) 1.1.0
 
 #### License
 
@@ -650,14 +651,10 @@ Apache License 2.0
 
 #### Used by
 
-- [windows-sys]( https://github.com/microsoft/windows-rs ) 0.48.0
 - [windows-sys]( https://github.com/microsoft/windows-rs ) 0.52.0
 - [windows-sys]( https://github.com/microsoft/windows-rs ) 0.59.0
-- [windows-targets]( https://github.com/microsoft/windows-rs ) 0.48.5
 - [windows-targets]( https://github.com/microsoft/windows-rs ) 0.52.6
-- [windows_i686_gnu]( https://github.com/microsoft/windows-rs ) 0.48.5
 - [windows_i686_gnu]( https://github.com/microsoft/windows-rs ) 0.52.6
-- [windows_x86_64_gnu]( https://github.com/microsoft/windows-rs ) 0.48.5
 - [windows_x86_64_gnu]( https://github.com/microsoft/windows-rs ) 0.52.6
 
 #### License
@@ -3228,14 +3225,14 @@ Apache License 2.0
 - [either]( https://github.com/rayon-rs/either ) 1.13.0
 - [equivalent]( https://github.com/cuviper/equivalent ) 1.0.1
 - [errno]( https://github.com/lambda-fairy/rust-errno ) 0.3.10
+- [fnv]( https://github.com/servo/rust-fnv ) 1.0.7
 - [futures-timer]( https://github.com/async-rs/futures-timer ) 3.0.3
 - [gimli]( https://github.com/gimli-rs/gimli ) 0.31.1
 - [glob]( https://github.com/rust-lang/glob ) 0.3.2
 - [hashbrown]( https://github.com/rust-lang/hashbrown ) 0.15.2
-- [heck]( https://github.com/withoutboats/heck ) 0.4.1
 - [heck]( https://github.com/withoutboats/heck ) 0.5.0
 - [indexmap]( https://github.com/indexmap-rs/indexmap ) 2.7.0
-- [itertools]( https://github.com/rust-itertools/itertools ) 0.12.1
+- [itertools]( https://github.com/rust-itertools/itertools ) 0.13.0
 - [lazy_static]( https://github.com/rust-lang-nursery/lazy-static.rs ) 1.5.0
 - [linux-raw-sys]( https://github.com/sunfishcode/linux-raw-sys ) 0.4.15
 - [lock_api]( https://github.com/Amanieu/parking_lot ) 0.4.12
@@ -3256,10 +3253,10 @@ Apache License 2.0
 - [signal-hook]( https://github.com/vorner/signal-hook ) 0.3.17
 - [smallvec]( https://github.com/servo/rust-smallvec ) 1.13.2
 - [socket2]( https://github.com/rust-lang/socket2 ) 0.5.8
-- [syn]( https://github.com/dtolnay/syn ) 1.0.109
 - [term]( https://github.com/Stebalien/term ) 0.7.0
 - [unicase]( https://github.com/seanmonstar/unicase ) 2.8.1
 - [unicode-segmentation]( https://github.com/unicode-rs/unicode-segmentation ) 1.12.0
+- [unicode-truncate]( https://github.com/Aetf/unicode-truncate ) 1.1.0
 - [unicode-width]( https://github.com/unicode-rs/unicode-width ) 0.1.14
 - [unicode-width]( https://github.com/unicode-rs/unicode-width ) 0.2.0
 
@@ -4508,6 +4505,7 @@ Apache License 2.0
 
 #### Used by
 
+- [ident_case]( https://github.com/TedDriggs/ident_case ) 1.0.1
 - [miniz_oxide]( https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide ) 0.8.3
 - [relative-path]( https://github.com/udoprog/relative-path ) 1.9.3
 - [winapi-i686-pc-windows-gnu]( https://github.com/retep998/winapi-rs ) 0.4.0
@@ -4599,6 +4597,7 @@ Apache License 2.0
 #### Used by
 
 - [unicode-segmentation]( https://github.com/unicode-rs/unicode-segmentation ) 1.12.0
+- [unicode-truncate]( https://github.com/Aetf/unicode-truncate ) 1.1.0
 - [unicode-width]( https://github.com/unicode-rs/unicode-width ) 0.1.14
 - [unicode-width]( https://github.com/unicode-rs/unicode-width ) 0.2.0
 
@@ -4661,7 +4660,42 @@ MIT License
 
 #### Used by
 
-- [mio]( https://github.com/tokio-rs/mio ) 0.8.11
+- [instability]( https://github.com/ratatui-org/instability ) 0.3.7
+
+#### License
+
+```text
+# MIT License
+
+Copyright (c) 2020 Stephen M. Coakley
+Copyright (c) The Ratatui Developers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### MIT
+
+MIT License
+
+#### Used by
+
 - [mio]( https://github.com/tokio-rs/mio ) 1.0.3
 
 #### License
@@ -4807,8 +4841,45 @@ MIT License
 
 #### Used by
 
-- [strum]( https://github.com/Peternator7/strum ) 0.25.0
-- [strum_macros]( https://github.com/Peternator7/strum ) 0.25.3
+- [darling]( https://github.com/TedDriggs/darling ) 0.20.10
+- [darling_core]( https://github.com/TedDriggs/darling ) 0.20.10
+- [darling_macro]( https://github.com/TedDriggs/darling ) 0.20.10
+
+#### License
+
+```text
+MIT License
+
+Copyright (c) 2017 Ted Driggs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### MIT
+
+MIT License
+
+#### Used by
+
+- [strum]( https://github.com/Peternator7/strum ) 0.26.3
+- [strum_macros]( https://github.com/Peternator7/strum ) 0.26.4
 
 #### License
 
@@ -4879,14 +4950,49 @@ MIT License
 
 #### Used by
 
-- [stability]( https://github.com/sagebind/stability ) 0.1.1
+- [compact_str]( https://github.com/ParkMyCar/compact_str ) 0.8.1
 
 #### License
 
 ```text
 MIT License
 
-Copyright (c) 2020 Stephen M. Coakley
+Copyright (c) 2021 Parker Timmerman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
+### MIT
+
+MIT License
+
+#### Used by
+
+- [castaway]( https://github.com/sagebind/castaway ) 0.2.3
+
+#### License
+
+```text
+MIT License
+
+Copyright (c) 2021 Stephen M. Coakley
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -4949,7 +5055,6 @@ MIT License
 
 #### Used by
 
-- [crossterm]( https://github.com/crossterm-rs/crossterm ) 0.27.0
 - [crossterm]( https://github.com/crossterm-rs/crossterm ) 0.28.1
 - [crossterm_winapi]( https://github.com/crossterm-rs/crossterm-winapi ) 0.9.1
 
@@ -5131,7 +5236,7 @@ MIT License
 
 #### Used by
 
-- [ratatui]( https://github.com/ratatui-org/ratatui ) 0.25.0
+- [ratatui]( https://github.com/ratatui/ratatui ) 0.29.0
 
 #### License
 
@@ -5139,7 +5244,7 @@ MIT License
 The MIT License (MIT)
 
 Copyright (c) 2016-2022 Florian Dehau
-Copyright (c) 2023 The Ratatui Developers
+Copyright (c) 2023-2024 The Ratatui Developers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
