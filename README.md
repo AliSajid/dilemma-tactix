@@ -2,11 +2,11 @@
 # Repeated Prisoners Dilemma
 
 [![Continuous Integration](https://github.com/AliSajid/dilemma-tactix/actions/workflows/ci.yaml/badge.svg)](https://github.com/AliSajid/dilemma-tactix/actions/workflows/ci.yaml)
-[![Crates.io Version](https://img.shields.io/crates/v/dilemma-tactix?logo=rust&label=Crates.io%20Release)](https://crates.io/crates/dilemma-tactix)
+[![Crates.io Version](https://img.shields.io/crates/v/dilemma-tactix?logo=docs.rs&logoColor=yellow&label=Crates.io%20Release)](https://crates.io/crates/dilemma-tactix)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/v/release/AliSajid/dilemma-tactix?logo=github&label=Github%20Release)](https://github.com/AliSajid/dilemma-tactix/releases)
 [![docs.rs](https://img.shields.io/docsrs/dilemma-tactix?logo=rust&label=docs.rs)](https://docs.rs/dilemma-tactix)
 [![Crates.io License](https://img.shields.io/crates/l/dilemma-tactix?label=License)](https://github.com/AliSajid/dilemma-tactix/tree/main#license)
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: WIP–Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 [![REUSE status](https://api.reuse.software/badge/github.com/AliSajid/dilemma-tactix)](https://api.reuse.software/info/github.com/AliSajid/dilemma-tactix)
 [![CII Best Practices](https://img.shields.io/cii/percentage/9927?logo=securityscorecard&label=OpenSSF%20Best%20Practices)](https://www.bestpractices.dev/projects/9927)
@@ -28,11 +28,11 @@ A simple project to simulate prisoners dilemma and multiple strategies
 
 ## Builds
 
-|         | Stable | Beta| Nightly| MSRV (1.74.1)|
+|| Stable | Beta| Nightly| MSRV (1.74.1)|
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Linux   | ![Ubuntu x Stable Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/2142caf9bfe6fc8cdc7d1b8ccd72ce09/raw/ubuntu-stable.json)   | ![Ubuntu x Beta Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/ubuntu-beta.json)   | ![Ubuntu x Nightly Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/ubuntu-nightly.json)   | ![Ubuntu x MSRV Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/ubuntu-msrv.json)   |
 | Windows | ![Windows x Stable Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/2142caf9bfe6fc8cdc7d1b8ccd72ce09/raw/windows-stable.json) | ![Windows x Beta Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/windows-beta.json) | ![Windows x Nightly Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/windows-nightly.json) | ![Windows x MSRV Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/windows-msrv.json) |
-| macOS   | ![macOS x Stable Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/2142caf9bfe6fc8cdc7d1b8ccd72ce09/raw/macos-stable.json)     | ![macOS x Beta Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/macos-beta.json)     | ![macOS x Nightly Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/macos-nightly.json)     | ![macOS x MSRV Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/macos-msrv.json)     |
+| macos   | ![macos x Stable Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/2142caf9bfe6fc8cdc7d1b8ccd72ce09/raw/macos-stable.json)     | ![macos x Beta Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/macos-beta.json)     | ![macos x Nightly Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/macos-nightly.json)     | ![macos x MSRV Rust](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AliSajid/d52f912107d7609656370db9d741596c/raw/macos-msrv.json)     |
 
 ## Current Status
 
