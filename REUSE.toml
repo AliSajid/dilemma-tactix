@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: 2023 - 2024 Ali Sajid Imami
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
+
+version = 1
+SPDX-PackageName = "dilemma-tactix"
+SPDX-PackageSupplier = "Ali Sajid Imami <Ali.Sajid.Imami@gmail.com>"
+SPDX-PackageDownloadLocation = "https://github.com/AliSajid/dilemma-tactix"
+
+[[annotations]]
+path = [
+    ".gitignore",
+    ".gitleaksignore",
+    ".markdownlintignore",
+    ".markdownlint.json",
+    ".secrets.baseline",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "Cargo.lock"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "MIT OR Apache-2.0"
+
+[[annotations]]
+path = ["licenses_report.json", "renovate.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "Apache-2.0 OR MIT"
+
+[[annotations]]
+path = "CHANGELOG.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ".github/.codecov.yaml"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "OSSMETADATA"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "meta/vale-styles/config/**/*"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 - 2024 Ali Sajid Imami"
+SPDX-License-Identifier = "CC0-1.0"

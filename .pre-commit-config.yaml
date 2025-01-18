@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: 2023 - 2024 Ali Sajid Imami
+#
+# SPDX-License-Identifier: CC0-1.0
 repos:
     - repo: local
       hooks:
@@ -25,7 +28,7 @@ repos:
           pass_filenames: false
         - id: cargo-about
           name: Generate list of licenses in JSON and Markdown
-          entry: mise run util:generate-about
+          entry: mise run utils:generate-about
           language: system
           types_or: [file, rust]
           files: "Cargo.toml$"
