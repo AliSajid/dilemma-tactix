@@ -8,13 +8,16 @@ name: Continuous Integration
 on:
     push:
         branches:
-            - 'main'
+            - main
+            - next
     pull_request:
         branches:
             - main
+            - next
         types:
             - closed
     workflow_dispatch:
+
 concurrency:
     group: CI
 env:

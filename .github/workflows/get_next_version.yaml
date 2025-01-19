@@ -11,8 +11,10 @@ on:
       new-release-published:
         description: Indicates whether a new release will be published. The value is a string, either 'true' or 'false'.
         value: ${{ jobs.get-next-version.outputs.new-release-published }}
+
 permissions:
   contents: read
+
 jobs:
   get-next-version:
     name: Get next release version
@@ -24,15 +26,18 @@ jobs:
         uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
         with:
           egress-policy: audit
+
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
         with:
           fetch-depth: 0
           persist-credentials: false
+
       - name: Configure Node.js
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
         with:
           node-version: lts/*
+
       - name: Cache action npm dependencies
         uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
         id: cache-node-modules
@@ -40,11 +45,13 @@ jobs:
           path: ${{ runner.temp }}/.semantic-release-action_next-release-version/node_modules
           key: |
             semantic-release-action/next-release-version-${{ runner.os }}-node-${{ hashFiles('${{ github.action_path }}/package-lock.json') }}
+
       - name: Install dependencies on cache miss
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: |
           npm install -g semantic-release semantic-release-export-data
         shell: bash
+
       - name: Get next release version
         id: get-next-version
         env:
