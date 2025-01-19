@@ -8,6 +8,9 @@ on:
     workflow_call:
 
 name: Semantic Release
+env:
+    RUST_BACKTRACE: 1
+    SEMREL_RUST_VERSION: 2.1.53
 
 concurrency:
     group: ${{ github.workflow }}
@@ -142,11 +145,6 @@ jobs:
               with:
                 fetch-depth: 0
                 persist-credentials: false
-
-            - name: Install mise-en-place
-              uses: jdx/mise-action@v2
-              with:
-                experimental: true
 
             - name: Import GPG key
               uses: crazy-max/ghaction-import-gpg@v6

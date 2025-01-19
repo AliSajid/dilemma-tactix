@@ -3,14 +3,12 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-License-Identifier: MIT
 
-name: Scorecard Supply-Chain Security
+name: Scorecard supply-chain security
 on:
   branch_protection_rule:
   schedule:
     - cron: '22 9 * * 3'
   push:
-    branches:
-      - next
 
 permissions: read-all
 
@@ -54,14 +52,14 @@ jobs:
           results_format: sarif
           publish_results: true
 
-      - name: Upload Scorecard Result Artifact
+      - name: "Upload artifact"
         uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.pre.node20
         with:
           name: SARIF file
           path: results.sarif
           retention-days: 5
 
-      - name: Upload to GitHub code-scanning
+      - name: "Upload to code-scanning"
         uses: github/codeql-action/upload-sarif@b6a472f63d85b9c78a3ac5e89422239fc15e9b3c # v3
         with:
           sarif_file: results.sarif
