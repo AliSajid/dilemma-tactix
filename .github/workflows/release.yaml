@@ -9,7 +9,7 @@ on:
 
 name: Semantic Release
 env:
-    RUST_BACKTRACE: 1
+    RUST_BACKTRACE: 0
     SEMREL_RUST_VERSION: 2.1.53
 
 concurrency:
@@ -66,6 +66,7 @@ jobs:
             - name: Install tree
               if: runner.os == 'Linux'
               run: sudo apt install tree
+
             - name: Install build inputs
               if: runner.os == 'Linux' && !matrix.build.cross
               run: sudo apt install musl-tools mingw-w64
@@ -89,6 +90,7 @@ jobs:
               uses: taiki-e/install-action@v2
               with:
                 tool: cross
+
             - name: Configure cross
               if: matrix.build.cross
               run: echo "CARGO=cross" >> "$GITHUB_ENV"
@@ -99,6 +101,7 @@ jobs:
             - name: Show generated binary
               if: runner.os == 'Linux'
               run: tree target/
+
             - name: Create release archive - windows
               if: matrix.build.target == 'x86_64-pc-windows-gnu' || matrix.build.target == 'i686-pc-windows-gnu'
               run: |
@@ -166,10 +169,12 @@ jobs:
 
             - name: Install dependencies
               run: sudo apt install tree
+
             - name: Install semantic-release-cargo
               uses: taiki-e/install-action@v2
               with:
                 tool: semantic-release-cargo@${{env.SEMREL_RUST_VERSION}}
+
             - name: Download release artifacts
               uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4
               with:
@@ -197,6 +202,7 @@ jobs:
 
             - name: Install Conventional Commit preset
               run: npm install conventional-changelog-conventionalcommits
+
             - name: Semantic Release
               uses: cycjimmy/semantic-release-action@b1b432f13acb7768e0c8efdec416d363a57546f2 # v4.1.1
               id: semantic
