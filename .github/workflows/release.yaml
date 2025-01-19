@@ -8,9 +8,6 @@ on:
     workflow_call:
 
 name: Semantic Release
-env:
-    RUST_BACKTRACE: 0
-    SEMREL_RUST_VERSION: 2.1.53
 
 concurrency:
     group: ${{ github.workflow }}
@@ -185,7 +182,7 @@ jobs:
               uses: cycjimmy/semantic-release-action@b1b432f13acb7768e0c8efdec416d363a57546f2 # v4.1.1
               id: semantic
               with:
-                semantic_version: 22.0.3
+                semantic_version: 24
                 extra_plugins: |
                     @semantic-release/exec@6
                     @semantic-release/git@10
