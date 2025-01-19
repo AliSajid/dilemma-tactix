@@ -44,7 +44,7 @@ jobs:
             - name: Install Rust
               uses: dtolnay/rust-toolchain@c5a29ddb4d9d194e7c84ec8c3fba61b1c31fee8c
               with:
-                toolchain: stable
+                tool: cargo-audit
 
           - name: Security Audit
             run: cargo audit
