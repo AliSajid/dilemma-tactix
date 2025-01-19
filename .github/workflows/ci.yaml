@@ -7,9 +7,6 @@
 name: Continuous Integration
 on:
     push:
-        branches:
-            - main
-            - next
     pull_request:
         branches:
             - main
