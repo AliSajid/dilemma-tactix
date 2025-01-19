@@ -22,7 +22,6 @@ jobs:
 
             - uses: dtolnay/rust-toolchain@nightly
               with:
-                version: latest
                 experimental: true
 
             - name: Install Rust Toolchain
