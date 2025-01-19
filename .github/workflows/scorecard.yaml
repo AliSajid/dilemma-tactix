@@ -38,7 +38,7 @@ jobs:
           results_format: sarif
           publish_results: true
 
-      - name: Upload artifact
+      - name: Upload Scorecard Result Artifact
         uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.pre.node20
         with:
           name: SARIF file
