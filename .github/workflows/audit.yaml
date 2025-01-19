@@ -46,10 +46,10 @@ jobs:
               with:
                 experimental: true
 
-          - name: Install Rust
-            uses: dtolnay/rust-toolchain@a54c7afa936fefeb4456b2dd8068152669aa8203
-            with:
-              toolchain: stable
+            - name: Install Rust
+              uses: dtolnay/rust-toolchain@a54c7afa936fefeb4456b2dd8068152669aa8203
+              with:
+                toolchain: stable
 
           - name: Security Audit
             run: cargo audit
