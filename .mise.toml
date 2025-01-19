@@ -13,7 +13,6 @@
 "cargo:cross" = "0.2.5"
 "cargo:mdbook" = "0.4.43"
 "cargo:mdbook-inline-highlighting" = "0.1.0"
-"cargo:mdbook-plantuml" = "0.8.0"
 "cargo:semantic-release-cargo" = "2.4.0"
 node = "22.14.0"
 "npm:conventional-changelog-conventionalcommits" = "8.0.0"
