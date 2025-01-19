@@ -18,7 +18,7 @@ permissions:
 jobs:
   get-next-version:
     name: Get next release version
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       new-release-published: ${{ steps.get-next-version.outputs.new-release-published }}
     steps:
