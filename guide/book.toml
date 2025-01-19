@@ -13,13 +13,10 @@ title = "The Dilemma-Tactix Book"
 [rust]
 edition = "2021"
 
-[preprocessor.plantuml]
-plantuml-cmd="http://www.plantuml.com/plantuml"
-
 [preprocessor.inline-highlighting]
 
 [output.html]
-git-repository-url = "https://github.com/AliSajid/brainfoamkit"
+git-repository-url = "https://github.com/AliSajid/dilemma_tactix"
 
 [output.html.print]
 enable = true
