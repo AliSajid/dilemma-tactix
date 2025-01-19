@@ -23,17 +23,12 @@ jobs:
             - name: Checkout
               uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-            - name: Install mise-en-place
-              uses: jdx/mise-action@v2
-              env:
-                MISE_ENV: audit
-              with:
-                experimental: true
-
             - name: Install Rust
-              uses: dtolnay/rust-toolchain@a54c7afa936fefeb4456b2dd8068152669aa8203
+              uses: dtolnay/rust-toolchain@stable
+            - name: Install cargo-audit
+              uses: taiki-e/install-action@d3712f40a2bae95e3ce25a24f82a795ed3df0f1c # v2.12.6
               with:
-                toolchain: stable
+                tool: cargo-audit
 
             - name: Security Audit
               run: cargo audit
