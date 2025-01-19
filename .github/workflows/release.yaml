@@ -8,9 +8,6 @@ on:
     workflow_call:
 
 name: Semantic Release
-env:
-    RUST_BACKTRACE: 0
-    SEMREL_RUST_VERSION: 2.1.53
 
 concurrency:
     group: ${{ github.workflow }}
