@@ -67,7 +67,6 @@ jobs:
             - name: Install mise-en-place
               uses: jdx/mise-action@v2
               with:
-                version: latest
                 experimental: true
 
             - name: Install Rust toolchain
@@ -134,7 +133,6 @@ jobs:
             - name: Install mise-en-place
               uses: jdx/mise-action@v2
               with:
-                version: latest
                 experimental: true
 
             - name: Import GPG key
