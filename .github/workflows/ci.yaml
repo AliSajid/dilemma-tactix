@@ -62,6 +62,8 @@ jobs:
 
             - name: Install mise-en-place
               uses: jdx/mise-action@v2
+              env:
+                MISE_ENV: "ci"
               with:
                 experimental: true
 
@@ -80,17 +82,8 @@ jobs:
             - name: Cache dependencies
               uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2.7.7
 
-            - name: Cargo Build
-              run: cargo build --verbose
-
-            - name: Cargo Test
-              run: cargo test
-
-            - name: Cargo Format
-              run: cargo +nightly fmt --all -- --check
-
-            - name: Cargo Lint
-              run: cargo clippy -- -D warnings
+            - name: Build and test the codebase
+              run: mise run test
 
             - name: Wait before badge creation
               uses: AliSajid/random-wait-action@v2.7.1

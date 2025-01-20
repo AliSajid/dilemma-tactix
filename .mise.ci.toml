@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2023 - 2024 Ali Sajid Imami
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
+
+[tools]
+"cargo:cargo-llvm-cov" = "0.6.16"
+"cargo:cargo-nextest" = "0.9.87"
+
+[tasks.clean]
+description = "Clean the stale artifacts from the directory"
+run = "cargo clean"
+
+[tasks.test]
+description = "Run all the tests"
+run = "cargo nextest run"
+depends = ["clean", "lint", "fmt", "build"]
+
+[tasks.build]
+description = "Build the debug version"
+run = "cargo build --verbose"
+
+[tasks.fmt]
+description = "Format the codebase"
+run = "cargo +nightly fmt --all -- --check"
+
+[tasks.lint]
+description = "Lint the codebase"
+run = "cargo clippy -- -D warnings"
