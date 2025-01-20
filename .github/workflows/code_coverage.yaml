@@ -22,6 +22,8 @@ jobs:
 
             - name: Install mise-en-place
               uses: jdx/mise-action@v2
+              env:
+                MISE_ENV: test
               with:
                 experimental: true
 
@@ -32,10 +34,7 @@ jobs:
                 components: llvm-tools-preview
 
             - name: Collect coverage data (including doctests)
-              run: |
-                cargo llvm-cov --no-report nextest --config-file nextest.toml
-                cargo llvm-cov --no-report --doc
-                cargo llvm-cov report --doctests --lcov --output-path lcov.info
+              run: mise run coverage
 
             - name: Upload to codecov.io
               uses: codecov/codecov-action@v5
