@@ -25,6 +25,8 @@ jobs:
 
             - name: Install mise-en-place
               uses: jdx/mise-action@v2
+              env:
+                MISE_ENV: audit
               with:
                 experimental: true
 
