@@ -70,6 +70,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+#[allow(clippy::needless_pass_by_ref_mut)]
 fn run_app<B: Backend>(terminal: &mut Terminal<B>, app: &mut App) -> io::Result<bool> {
     loop {
         terminal.draw(|f| ui(f, app))?;

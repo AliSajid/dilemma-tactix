@@ -120,12 +120,12 @@ impl NumberPair {
     /// `max_value` for each of `first` and `second`.
     #[must_use]
     pub fn random(min_value: u32, max_value: u32) -> Self {
-        let mut rng = ChaCha12Rng::from_entropy();
+        let mut rng = ChaCha12Rng::from_os_rng();
 
         if min_value < max_value {
             Self::new(
-                rng.gen_range(min_value..=max_value),
-                rng.gen_range(min_value..=max_value),
+                rng.random_range(min_value..=max_value),
+                rng.random_range(min_value..=max_value),
             )
         } else {
             panic!("min_value must be less than max_value");
@@ -172,8 +172,8 @@ impl NumberPair {
 
         if min_value < max_value {
             Self::new(
-                rng.gen_range(min_value..=max_value),
-                rng.gen_range(min_value..=max_value),
+                rng.random_range(min_value..=max_value),
+                rng.random_range(min_value..=max_value),
             )
         } else {
             panic!("min_value must be less than max_value");
@@ -292,9 +292,9 @@ impl Default for NumberPair {
     /// A new `NumberPair` struct with random values between 1 and 10 for each
     /// of `first` and `second`.
     fn default() -> Self {
-        let mut rng = ChaCha12Rng::from_entropy();
+        let mut rng = ChaCha12Rng::from_os_rng();
 
-        Self::new(rng.gen_range(1..10), rng.gen_range(1..10))
+        Self::new(rng.random_range(1..10), rng.random_range(1..10))
     }
 }
 

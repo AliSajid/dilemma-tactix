@@ -204,9 +204,9 @@ impl ChoiceNameOptions {
     /// * [`get_choice_pair`](ChoiceNameOptions::get_choice_pair)
     #[must_use]
     pub fn get_random_pair() -> (&'static str, &'static str) {
-        let mut rng = ChaCha12Rng::from_entropy();
+        let mut rng = ChaCha12Rng::from_os_rng();
 
-        let choice = rng.gen_range(0..Self::CHOICE_PAIRS_LENGTH);
+        let choice = rng.random_range(0..Self::CHOICE_PAIRS_LENGTH);
 
         Self::get_choice_pair(choice)
     }
@@ -256,7 +256,7 @@ impl ChoiceNameOptions {
     pub fn get_random_pair_seeded(seed: u64) -> (&'static str, &'static str) {
         let mut rng = ChaCha12Rng::seed_from_u64(seed);
 
-        let choice = rng.gen_range(0..Self::CHOICE_PAIRS_LENGTH);
+        let choice = rng.random_range(0..Self::CHOICE_PAIRS_LENGTH);
 
         Self::get_choice_pair(choice)
     }

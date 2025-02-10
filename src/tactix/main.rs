@@ -17,7 +17,7 @@ use dilemma_tactix_lib::{
     GameOptions,
 };
 use rand::{
-    seq::SliceRandom,
+    prelude::IndexedRandom,
     SeedableRng,
 };
 
