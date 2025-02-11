@@ -64,18 +64,18 @@ jobs:
               uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
             - name: Install mise-en-place
-              uses: jdx/mise-action@v2
+              uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2
               with:
                 experimental: true
 
             - name: Install Rust
-              uses: dtolnay/rust-toolchain@a54c7afa936fefeb4456b2dd8068152669aa8203
+              uses: dtolnay/rust-toolchain@c5a29ddb4d9d194e7c84ec8c3fba61b1c31fee8c
               with:
                 toolchain: ${{matrix.rust}}
                 components: rustfmt, clippy
 
             - name: Install nightly Rust
-              uses: dtolnay/rust-toolchain@a54c7afa936fefeb4456b2dd8068152669aa8203
+              uses: dtolnay/rust-toolchain@c5a29ddb4d9d194e7c84ec8c3fba61b1c31fee8c
               with:
                 toolchain: nightly
                 components: rustfmt, clippy
@@ -93,13 +93,13 @@ jobs:
               run: cargo clippy -- -D warnings
 
             - name: Wait before badge creation
-              uses: AliSajid/random-wait-action@v2.7.1
+              uses: AliSajid/random-wait-action@01a89d4ed3ec77b010cf360224470c7aea5bd186 # v2.8.0
               with:
                 minimum: ${{env.MINIMUM_WAIT}}
                 maximum: ${{env.MAXIMUM_WAIT}}
 
             - name: Create Awesome Badge - Success
-              uses: schneegans/dynamic-badges-action@5d424ad4060f866e4d1dab8f8da0456e6b1c4f56 # v1.6.0
+              uses: schneegans/dynamic-badges-action@e9a478b16159b4d31420099ba146cdc50f134483 # v1.7.0
               if: success()
               with:
                 auth: ${{secrets.GIST_SECRET}}
@@ -111,7 +111,7 @@ jobs:
                 color: green
 
             - name: Create Awesome Badge - Failure
-              uses: schneegans/dynamic-badges-action@5d424ad4060f866e4d1dab8f8da0456e6b1c4f56 # v1.6.0
+              uses: schneegans/dynamic-badges-action@e9a478b16159b4d31420099ba146cdc50f134483 # v1.7.0
               if: failure()
               with:
                 auth: ${{secrets.GIST_SECRET}}

@@ -65,7 +65,7 @@ jobs:
               run: sudo apt install musl-tools mingw-w64
 
             - name: Install mise-en-place
-              uses: jdx/mise-action@v2
+              uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2
               with:
                 experimental: true
 
@@ -131,12 +131,12 @@ jobs:
                 persist-credentials: false
 
             - name: Install mise-en-place
-              uses: jdx/mise-action@v2
+              uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2
               with:
                 experimental: true
 
             - name: Import GPG key
-              uses: crazy-max/ghaction-import-gpg@v6
+              uses: crazy-max/ghaction-import-gpg@cb9bde2e2525e640591a934b1fd28eef1dcaf5e5 # v6
               with:
                 gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
                 passphrase: ${{ secrets.GPG_KEY_PASSPHRASE }}
