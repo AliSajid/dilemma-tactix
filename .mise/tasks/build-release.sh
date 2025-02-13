@@ -5,6 +5,9 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-License-Identifier: MIT
 
+#MISE description="Generate and sign artifacts for a new release"
+#MISE alias="br"
+
 set -euo pipefail
 
 # Inputs

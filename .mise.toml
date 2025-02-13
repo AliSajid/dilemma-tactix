@@ -21,28 +21,3 @@ node = "22.14.0"
 "npm:semantic-release-export-data" = "1.1.0"
 "npm:vercel" = "latest"
 "pipx:pre-commit" = "4.0.1"
-
-[tasks.clean]
-description = "Clean the stale artifacts from the directory"
-run = "cargo clean"
-
-[tasks.test]
-description = "Run all the tests"
-run = "cargo nextest run"
-depends = ["clean", "build"]
-
-[tasks.build]
-description = "Build the debug version"
-run = "cargo build"
-
-
-[tasks."utils:generate-about"]
-description = "Generate the cargo-about files"
-run = [
-    "./scripts/generate_about_json.sh",
-    "./scripts/generate_about_md.sh ./meta/licenses.hbs",
-]
-
-[tasks."utils:fix-lockfile"]
-description = "Rebuild the Cargo.lock file after fixing conflicts"
-run = ["rm Cargo.lock", "cargo update"]

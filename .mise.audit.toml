@@ -5,7 +5,3 @@
 
 [tools]
 "cargo:cargo-audit" = "0.21.0"
-
-[tasks.clean]
-description = "Clean the stale artifacts from the directory"
-run = "cargo audit"

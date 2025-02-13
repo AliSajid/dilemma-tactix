@@ -6,6 +6,8 @@
 # SPDX-License-Identifier: MIT
 
 #MISE description="Build and Deploy the documentation website to Vercel"
+#MISE alias="docs"
+
 # Exit immediately if a command exits with a non-zero status
 set -euo pipefail
 
