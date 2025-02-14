@@ -107,7 +107,7 @@ jobs:
                 tool: cross
 
             - name: Install cross
-              uses: taiki-e/install-action@v2
+              uses: taiki-e/install-action@297054b27414ad8086f67963ce1033c02fe309c3 # v2
               with:
                 tool: cross
 
