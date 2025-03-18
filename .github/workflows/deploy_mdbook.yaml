@@ -52,7 +52,7 @@ jobs:
         uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2.7.7
 
       - name: Install cargo-binstall
-        uses: taiki-e/install-action@2c41309d51ede152b6f2ee6bf3b71e6dc9a8b7df # v2
+        uses: taiki-e/install-action@37bdc826eaedac215f638a96472df572feab0f9b # v2
         with:
           tool: cargo-binstall
       - name: Install dependencies
