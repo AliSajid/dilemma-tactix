@@ -13,7 +13,7 @@ jobs:
         name: Generate Coverage
         runs-on: ubuntu-24.04
         container:
-            image: xd009642/tarpaulin:develop-nightly@sha256:e4c065221e3cb5f859abbc0b72a27bc3685d994ad559031842bbdccbf8e2b5d0
+            image: xd009642/tarpaulin:develop-nightly@sha256:3d3435cef8fc87da81aaac02faa0f4f4c76a6bd67925b1988d7474c5ee86e5a1
             options: --security-opt seccomp=unconfined
 
         steps:
@@ -25,7 +25,7 @@ jobs:
                 experimental: true
 
             - name: Install Rust Toolchain
-              uses: dtolnay/rust-toolchain@888c2e1ea69ab0d4330cbf0af1ecc7b68f368cc1
+              uses: dtolnay/rust-toolchain@56f84321dbccf38fb67ce29ab63e4754056677e0
               with:
                 toolchain: nightly
                 components: llvm-tools-preview
