@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Install mise-en-place
-        uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2
+        uses: jdx/mise-action@7a111ead46986ccad89a74ad013ba2a7c08c9e67 # v2
         with:
           experimental: true
 
@@ -48,10 +48,10 @@ jobs:
           toolchain: stable
 
       - name: Cache dependencies
-        uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2.7.7
+        uses: Swatinem/rust-cache@9d47c6ad4b02e050fd481d890b2ea34778fd09d6 # v2.7.8
 
       - name: Install cargo-binstall
-        uses: taiki-e/install-action@019e22100565643c6890fe3f00da0b63017c1672 # v2
+        uses: taiki-e/install-action@9903ab6feadaec33945de535fe9d181b91802a55 # v2
         with:
           tool: cargo-binstall
       - name: Install dependencies
