@@ -34,7 +34,7 @@ jobs:
           persist-credentials: false
 
       - name: Install mise-en-place
-        uses: jdx/mise-action@7a111ead46986ccad89a74ad013ba2a7c08c9e67 # v2
+        uses: jdx/mise-action@c94f0bf9e520b150e34c017db785461f7e71c5fb # v2
       - name: Configure Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
