@@ -48,9 +48,9 @@ jobs:
                   fi
 
     security_audit:
-        # if: ${{ !contains(github.event.commits[0].message, '[skip ci]') && needs.audit_needed.audit_needed == 'true'}}
+        if: ${{ !contains(github.event.commits[0].message, '[skip ci]') && needs.audit_needed.audit_needed == 'true'}}
         needs:
-          - audit-needed
+          - audit_needed
         runs-on: ubuntu-24.04
         env:
           MISE_ENV: audit
