@@ -332,13 +332,13 @@ mod tests {
 
     // This test checks the Display implementation for NumberPair
     #[rstest]
-    fn test_number_pair_display(_number_pair_example: NumberPair) {
+    fn test_number_pair_display() {
         // We create a NumberPair with values 1 and 2
         let number_pair = NumberPair::new(1, 2);
 
         // We check that the Display implementation for NumberPair correctly converts
         // the NumberPair to a string
-        assert_eq!(format!("{}", number_pair), "(1, 2)");
+        assert_eq!(format!("{number_pair}"), "(1, 2)");
     }
 
     // This test checks the `default` constructor for NumberPair
