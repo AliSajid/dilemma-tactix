@@ -1119,7 +1119,7 @@ impl GameOptionsBuilder {
     ///
     /// let game_options_builder =
     ///     GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized)
-    ///         .seed(123456789);
+    ///         .seed(123_456_789);
     ///
     /// # assert!(game_options_builder.is_err());
     /// ```
@@ -1134,7 +1134,7 @@ impl GameOptionsBuilder {
     ///
     /// let game_options_builder =
     ///     GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded)
-    ///         .seed(123456789);
+    ///         .seed(123_456_789);
     ///
     /// # assert!(game_options_builder.is_ok());
     /// ```
@@ -1149,7 +1149,7 @@ impl GameOptionsBuilder {
     ///
     /// let game_options_builder =
     ///     GameOptionsBuilder::new(GameOptionsBuilderTypes::Customized)
-    ///         .seed(123456789);
+    ///         .seed(123_456_789);
     ///
     /// # assert!(game_options_builder.is_err());
     /// ```
@@ -1267,6 +1267,7 @@ impl GameOptionsBuilder {
 }
 
 #[cfg(test)]
+#[allow(clippy::unwrap_used)]
 mod tests {
     use super::*;
 
@@ -1408,13 +1409,13 @@ mod tests {
     #[test]
     fn test_seed() {
         let game_options_builder_randomized =
-            GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized).seed(123456789);
+            GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized).seed(123_456_789);
         assert!(game_options_builder_randomized.is_err());
         let game_options_builder_seeded =
-            GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded).seed(123456789);
+            GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded).seed(123_456_789);
         assert!(game_options_builder_seeded.is_ok());
         let game_options_builder_customized =
-            GameOptionsBuilder::new(GameOptionsBuilderTypes::Customized).seed(123456789);
+            GameOptionsBuilder::new(GameOptionsBuilderTypes::Customized).seed(123_456_789);
         assert!(game_options_builder_customized.is_err());
     }
 
@@ -1449,7 +1450,7 @@ mod tests {
         assert!(builder.is_ok());
         let builder = builder?.choice_olympus("defect");
         assert!(builder.is_ok());
-        let builder = builder?.seed(123456789);
+        let builder = builder?.seed(123_456_789);
         assert!(builder.is_ok());
         let game_options = builder?.build();
 
@@ -1552,7 +1553,7 @@ mod tests {
         assert!(builder.is_ok());
         let builder = builder.unwrap().choice_olympus("defect");
         assert!(builder.is_ok());
-        let builder = builder.unwrap().seed(123456789);
+        let builder = builder.unwrap().seed(123_456_789);
         assert!(builder.is_ok());
         let game_options = builder.unwrap().build();
 
@@ -1570,7 +1571,7 @@ mod tests {
         assert!(builder.is_ok());
         let builder = builder.unwrap().choice_olympus("defect");
         assert!(builder.is_ok());
-        let builder = builder.unwrap().seed(123456789);
+        let builder = builder.unwrap().seed(123_456_789);
         assert!(builder.is_ok());
         let game_options = builder.unwrap().build();
 
@@ -1588,7 +1589,7 @@ mod tests {
         assert!(builder.is_ok());
         let builder = builder.unwrap().choice_olympus("defect");
         assert!(builder.is_ok());
-        let builder = builder.unwrap().seed(123456789);
+        let builder = builder.unwrap().seed(123_456_789);
         assert!(builder.is_ok());
         let game_options = builder.unwrap().build();
 
@@ -1606,7 +1607,7 @@ mod tests {
         assert!(builder.is_ok());
         let builder = builder.unwrap().choice_atlantis("cooperate");
         assert!(builder.is_ok());
-        let builder = builder.unwrap().seed(123456789);
+        let builder = builder.unwrap().seed(123_456_789);
         assert!(builder.is_ok());
         let game_options = builder.unwrap().build();
 
@@ -1633,16 +1634,16 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "min_value must not be set when using CusotmizedBuilder")]
     fn test_build_randomized_seed_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized);
-        let builder = builder.seed(123456789);
+        let builder = builder.seed(123_456_789);
         assert!(builder.is_err());
         builder.unwrap();
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field atlantis_atlantis can not be set when using RandomizedBuilder")]
     fn test_build_randomized_atlantis_atlantis_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized);
         let builder = builder.atlantis_atlantis(NumberPair::new(1, 1));
@@ -1651,7 +1652,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field atlantis_olympus can not be set when using RandomizedBuilder")]
     fn test_build_randomized_atlantis_olympus_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized);
         let builder = builder.atlantis_olympus(NumberPair::new(1, 1));
@@ -1660,7 +1661,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field olympus_atlantis can not be set when using RandomizedBuilder")]
     fn test_build_randomized_olympus_atlantis_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized);
         let builder = builder.olympus_atlantis(NumberPair::new(1, 1));
@@ -1669,7 +1670,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field olympus_olympus can not be set when using RandomizedBuilder")]
     fn test_build_randomized_olympus_olympus_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Randomized);
         let builder = builder.olympus_olympus(NumberPair::new(1, 1));
@@ -1678,7 +1679,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field atlantis_atlantis can not be set when using SeededBuilder")]
     fn test_build_seeded_atlantis_atlantis_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded);
         let builder = builder.atlantis_atlantis(NumberPair::new(1, 1));
@@ -1687,7 +1688,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field atlantis_olympus can not be set when using SeededBuilder")]
     fn test_build_seeded_atlantis_olympus_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded);
         let builder = builder.atlantis_olympus(NumberPair::new(1, 1));
@@ -1696,7 +1697,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field olympus_atlantis can not be set when using SeededBuilder")]
     fn test_build_seeded_olympus_atlantis_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded);
         let builder = builder.olympus_atlantis(NumberPair::new(1, 1));
@@ -1705,7 +1706,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field olympus_olympus can not be set when using SeededBuilder")]
     fn test_build_seeded_olympus_olympus_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Seeded);
         let builder = builder.olympus_olympus(NumberPair::new(1, 1));
@@ -1714,16 +1715,16 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field seed can not be set when using CustomizedBuilder")]
     fn test_build_customized_seed_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Customized);
-        let builder = builder.seed(123456789);
+        let builder = builder.seed(123_456_789);
         assert!(builder.is_err());
         builder.unwrap();
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field min_value can not be set when using CustomizedBuilder")]
     fn test_build_customized_min_value_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Customized);
         let builder = builder.min_value(1);
@@ -1732,7 +1733,7 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Field max_value can not be set when using CustomizedBuilder")]
     fn test_build_customized_max_value_panic() {
         let builder = GameOptionsBuilder::new(GameOptionsBuilderTypes::Customized);
         let builder = builder.max_value(10);
