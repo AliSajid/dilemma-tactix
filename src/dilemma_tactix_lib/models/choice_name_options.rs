@@ -98,10 +98,6 @@ pub struct ChoiceNameOptions {}
 /// random choice pairs. It also exposes the choice pairs as arrays and provides
 /// methods to retrieve the individual choices from each pair.
 impl ChoiceNameOptions {
-    // ... rest of the code ...
-}
-
-impl ChoiceNameOptions {
     /// The array of available choice pairs.
     const CHOICE_PAIRS: [(&'static str, &'static str); 17] = [
         ("cooperate", "defect"),
@@ -253,6 +249,7 @@ impl ChoiceNameOptions {
     /// * [`get_choice_pair`](ChoiceNameOptions::get_choice_pair)
     #[cfg(test)]
     #[doc(hidden)]
+    #[must_use]
     pub fn get_random_pair_seeded(seed: u64) -> (&'static str, &'static str) {
         let mut rng = ChaCha12Rng::seed_from_u64(seed);
 
@@ -416,9 +413,9 @@ mod tests {
         // These assertions check that the choices are as expected for the given seed,
         // ensuring that get_random_pair_seeded is correctly using the seed to generate
         // choices
-        assert_eq!(choice_atlantis, "discrete");
+        assert_eq!(choice_atlantis, "particle");
 
-        assert_eq!(choice_olympus, "continuous");
+        assert_eq!(choice_olympus, "wave");
     }
 
     // This test checks that the get_random_pair_seeded method is repeatable for a
@@ -430,17 +427,17 @@ mod tests {
         // These assertions check that the choices are as expected for the given seed,
         // ensuring that get_random_pair_seeded is correctly using the seed to generate
         // choices
-        assert_eq!(choice_atlantis_a, "discrete");
+        assert_eq!(choice_atlantis_a, "particle");
 
-        assert_eq!(choice_olympus_a, "continuous");
+        assert_eq!(choice_olympus_a, "wave");
 
         // This part repeats the same checks, to ensure that the same seed will always
         // generate the same pair of choices
         let (choice_atlantis_b, choice_olympus_b) = ChoiceNameOptions::get_random_pair_seeded(seed);
 
-        assert_eq!(choice_atlantis_b, "discrete");
+        assert_eq!(choice_atlantis_b, "particle");
 
-        assert_eq!(choice_olympus_b, "continuous");
+        assert_eq!(choice_olympus_b, "wave");
 
         // This assertion checks that the choices are the same for both pairs, ensuring
         // that get_random_pair_seeded is correctly using the seed to generate choices
