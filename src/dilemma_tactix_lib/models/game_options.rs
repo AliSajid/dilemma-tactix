@@ -381,15 +381,15 @@ mod tests {
 
         assert_eq!(game_options.atlantis_atlantis(), NumberPair::new(6, 9));
 
-        assert_eq!(game_options.atlantis_olympus(), NumberPair::new(3, 8));
+        assert_eq!(game_options.atlantis_olympus(), NumberPair::new(2, 3));
 
-        assert_eq!(game_options.olympus_atlantis(), NumberPair::new(6, 7));
+        assert_eq!(game_options.olympus_atlantis(), NumberPair::new(8, 6));
 
-        assert_eq!(game_options.olympus_olympus(), NumberPair::new(3, 6));
+        assert_eq!(game_options.olympus_olympus(), NumberPair::new(10, 3));
 
-        assert_eq!(game_options.choice_atlantis(), "discrete");
+        assert_eq!(game_options.choice_atlantis(), "particle");
 
-        assert_eq!(game_options.choice_olympus(), "continuous");
+        assert_eq!(game_options.choice_olympus(), "wave");
 
         assert!(choice_atlantis_options.contains(&game_options.choice_atlantis()));
 
@@ -402,15 +402,15 @@ mod tests {
 
         assert_eq!(game_options.atlantis_atlantis(), NumberPair::new(6, 9));
 
-        assert_eq!(game_options.atlantis_olympus(), NumberPair::new(3, 8));
+        assert_eq!(game_options.atlantis_olympus(), NumberPair::new(2, 3));
 
-        assert_eq!(game_options.olympus_atlantis(), NumberPair::new(6, 7));
+        assert_eq!(game_options.olympus_atlantis(), NumberPair::new(8, 6));
 
-        assert_eq!(game_options.olympus_olympus(), NumberPair::new(3, 6));
+        assert_eq!(game_options.olympus_olympus(), NumberPair::new(10, 3));
 
-        assert_eq!(game_options.choice_atlantis(), "discrete");
+        assert_eq!(game_options.choice_atlantis(), "particle");
 
-        assert_eq!(game_options.choice_olympus(), "continuous");
+        assert_eq!(game_options.choice_olympus(), "wave");
     }
 
     #[test]
@@ -418,9 +418,9 @@ mod tests {
         let game_options = GameOptions::new(1, 10);
 
         assert_eq!(
-            format!("{}", game_options),
-            "choice_atlantis: discrete, choice_olympus: continuous, atlantis_atlantis: (6, 9), \
-             atlantis_olympus: (3, 8), olympus_atlantis: (6, 7), olympus_olympus: (3, 6)"
+            format!("{game_options}"),
+            "choice_atlantis: particle, choice_olympus: wave, atlantis_atlantis: (6, 9), \
+             atlantis_olympus: (2, 3), olympus_atlantis: (8, 6), olympus_olympus: (10, 3)"
         );
     }
 
