@@ -15241,7 +15241,7 @@
             }
         },
         {
-            "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+            "license": "(Apache-2.0 WITH LLVM-exception) OR Apache-2.0 OR MIT",
             "package": {
                 "authors": [
                     "Dan Gohman <dev@sunfishcode.online>"
@@ -15416,7 +15416,7 @@
             }
         },
         {
-            "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+            "license": "(Apache-2.0 WITH LLVM-exception) OR Apache-2.0 OR MIT",
             "package": {
                 "authors": [
                     "Dan Gohman <dev@sunfishcode.online>"
@@ -22593,7 +22593,7 @@
             }
         },
         {
-            "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+            "license": "(Apache-2.0 WITH LLVM-exception) OR Apache-2.0 OR MIT",
             "package": {
                 "authors": [
                     "Dan Gohman <dev@sunfishcode.online>",
@@ -23134,7 +23134,7 @@
             }
         },
         {
-            "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+            "license": "(Apache-2.0 WITH LLVM-exception) OR Apache-2.0 OR MIT",
             "package": {
                 "authors": [
                     "Dan Gohman <dev@sunfishcode.online>",
