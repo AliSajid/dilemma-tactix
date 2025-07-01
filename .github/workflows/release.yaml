@@ -101,6 +101,16 @@ jobs:
               with:
                 tool: cross
 
+            - name: Install cross
+              uses: taiki-e/install-action@v2
+              with:
+                tool: cross
+
+            - name: Install cross
+              uses: taiki-e/install-action@7bcfa52beaaa5899d991cea0399a67efc5e28171 # v2
+              with:
+                tool: cross
+
             - name: Configure cross
               if: matrix.build.cross
               run: echo "CARGO=cross" >> "$GITHUB_ENV"
